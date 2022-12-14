@@ -43,7 +43,6 @@ class Hashtable(MutableMapping):
         to a new location
         """
         # We need to increase the table's capacity and migrate the data
-        # print(f"Old capacity: {self.capacity}, {self.num_items} present")
         # Reset the number of elements
         self.num_items = 0
         self.capacity = self.capacity * self.growth_factor
@@ -72,8 +71,6 @@ class Hashtable(MutableMapping):
             Value to insert in the table
         """
 
-        # Create item template
-        # item = namedtuple("item", ['key', 'value', 'not_deleted'])
         # Getting index
         index = self._hash(key)
         overwrite = False
@@ -142,10 +139,8 @@ class Hashtable(MutableMapping):
         index = self._hash(key)
 
         # item namedtuple template
-        # item = namedtuple("item", ['key', 'value', 'not_deleted'])
         element = self._items[index]
         if element is not None:
-            # item = namedtuple("item", ['key', 'value', 'not_deleted'])
 
             # Check case when element was already deleted
             if not element.not_deleted:
@@ -203,7 +198,7 @@ class Hashtable(MutableMapping):
         for element in self._items:
             if element is not None and element.not_deleted:
                 num_elements += 1
-        # num_elements = (sum(item is not None and item.not_deleted for item in self._items))
+                
         return num_elements
 
     def __iter__(self):
