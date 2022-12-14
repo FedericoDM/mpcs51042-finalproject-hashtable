@@ -1,5 +1,8 @@
 # MPCS 51042 Python Programming Final Project
 
+
+This repository contains the code for my final project for MPCS 51042 Python Programming at the University of Chicago. The project consisted in implementing a custom hashtable data structure that uses linear probing. Afterwards, the custom hashtable was used to create a speaker recognition system with Markov models to determine the likelihood that a given text was spoken by a particular person. The original README for the project is below.
+
 ## Introduction
 
 In this final project, you will develop a modeling system using Markov Models.
